@@ -1,39 +1,38 @@
 #include <iostream>
-#include "engines.h"
-#include "electricity.h"
-#include "petrol.h"
-#include "toyota_prius.h"
+#include "magic.h"
+#include "plague.h"
+#include "divine_revenge.h"
+#include "plague_divine_revenge.h"
 
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "Russian");
 
-    cout << "Created a class electricity" << endl;
-    electricity ele;
-    ele.do_something();
-    ele.using_method();
+    cout << "Create a spell (class) of the school of light magic" << endl;
+    divine_revenge spell_dv;
+    spell_dv.conjure();
+    spell_dv.using_magic();
     cout << endl;
 
-    cout << "Created an instance petrol" << endl;
-    petrol pet;
-    pet.do_something();
-    pet.using_method();
+    cout << "Create a spell (class) of the school of magic of darkness" << endl;
+    plague spell_p;
+    spell_p.conjure();
+    spell_p.using_magic();
     cout << endl;
 
-    cout << "Create a parent class pointer engines" << endl;
-    engines* eng = NULL;
-    eng = &pet;
-    eng->using_method();
-    eng = &ele;
-    eng->using_method();
+    cout << "Create the original magic (parent class)" << endl;
+    magic* mg = NULL;
+    mg = &spell_dv;
+    mg->using_magic();
+    mg = &spell_p;
+    mg->using_magic();
     cout << endl;
 
-    cout << "Created an instance toyota_prius" << endl;
-    toyota_prius tp;
-    tp.do_something();
-    cout << endl << "Call using_method():" << endl;
-    tp.using_method();
+    cout << "Create a combination spell (class)" << endl;
+    plague_divine_revenge spell_pdv;
+    spell_pdv.conjure();
+    cout << endl << "using magic:" << endl;
+    spell_pdv.using_magic();
     cout << endl;
 
     return 0;

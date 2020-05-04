@@ -6,15 +6,15 @@
 #define UNTITLED1_ENGINES_H
 #pragma once
 
-class engines {
+class magic {
 
 public:
-    void do_something();
-    virtual void using_method() = 0;
+    void conjure();
+    virtual void using_magic() = 0;
 
 private:
-    int engines_data1;
-    int engines_data2;
+    int magic_darkness;
+    int magic_light;
 };
 
 #endif //UNTITLED1_ENGINES_H
